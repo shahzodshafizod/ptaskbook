@@ -1,0 +1,2 @@
+erase *.exe *.o
+cls

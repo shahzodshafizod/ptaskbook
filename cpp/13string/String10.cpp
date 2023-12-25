@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	//Task("String10");
+	char str[1000];
+	cin.getline(str, 1000);
+
+	int len = 0;
+	while (str[len] != '\0')
+		len++;
+	
+	for (int i = 0; i < len/2; i++)
+	{
+		char C = str[i];
+		str[i] = str[len-1-i];
+		str[len-1-i] = C;
+	}
+
+	cout << str;
+	
+	return 0;
+}

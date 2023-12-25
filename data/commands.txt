@@ -1,0 +1,9 @@
+find . -type f | sort | tr '\n' '\0' | xargs -0 cat | openssl dgst -sha256
+
+To change all the directories to 755 (drwxr-xr-x):
+$ find js-gov4 -type d -exec chmod 755 {} \;
+
+To change all the files to 644 (-rw-r--r--):
+$ find js-gov4 -type f -exec chmod 644 {} \;
+
+for i in {1..30}; do mv "Tree$i" "Tree$(printf '%03d' $i)"; cd "Tree$(printf '%03d' $i)"; for j in {1..100}; do mkdir "$(printf '%03d' $j)"; mv "$(printf '%03d' $j).dat" "$(printf '%03d' $j)"; mv "$(printf '%03d' $j).ans" "$(printf '%03d' $j)"; done; cd ..; done

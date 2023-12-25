@@ -1,0 +1,4 @@
+node src/01begin.js
+
+// js-gov4 - worked: [Begin-Matrix]; String[1-6]
+// kt-gov2 - worked: [Begin-Matrix]; String[1-6]

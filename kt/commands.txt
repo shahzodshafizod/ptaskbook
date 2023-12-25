@@ -1,0 +1,35 @@
+kotlinc utils/*.kt -include-runtime -d utils/utils.jar
+kotlinc classes/classes.kt -include-runtime -d classes/classes.jar
+kotlinc -cp utils/utils.jar:classes/classes.jar scanner/scanner.kt -include-runtime -d scanner/scanner.jar
+kotlinc -cp scanner/scanner.jar task/01begin.kt -include-runtime -d task/01begin.jar
+kotlinc -cp scanner/scanner.jar task/02integer.kt -include-runtime -d task/02integer.jar
+kotlinc -cp scanner/scanner.jar task/03boolean.kt -include-runtime -d task/03boolean.jar
+kotlinc -cp scanner/scanner.jar task/04if.kt -include-runtime -d task/04if.jar
+kotlinc -cp scanner/scanner.jar task/05case.kt -include-runtime -d task/05case.jar
+kotlinc -cp scanner/scanner.jar task/06for.kt -include-runtime -d task/06for.jar
+kotlinc -cp scanner/scanner.jar task/07while.kt -include-runtime -d task/07while.jar
+kotlinc -cp scanner/scanner.jar task/08series.kt -include-runtime -d task/08series.jar
+kotlinc -cp scanner/scanner.jar task/09proc.kt -include-runtime -d task/09proc.jar
+kotlinc -cp scanner/scanner.jar task/10minmax.kt -include-runtime -d task/10minmax.jar
+kotlinc -cp scanner/scanner.jar task/11array.kt -include-runtime -d task/11array.jar
+kotlinc -cp scanner/scanner.jar task/12matrix.kt -include-runtime -d task/12matrix.jar
+kotlinc -cp scanner/scanner.jar task/13string.kt -include-runtime -d task/13string.jar
+kotlinc -cp scanner/scanner.jar task/14file.kt -include-runtime -d task/14file.jar
+kotlinc -cp scanner/scanner.jar task/15text.kt -include-runtime -d task/15text.jar
+kotlinc -cp scanner/scanner.jar task/16param.kt -include-runtime -d task/16param.jar
+kotlinc -cp scanner/scanner.jar task/17recur.kt -include-runtime -d task/17recur.jar
+kotlinc -cp scanner/scanner.jar task/18dynamic.kt -include-runtime -d task/18dynamic.jar
+kotlinc -cp scanner/scanner.jar task/19tree.kt -include-runtime -d task/19tree.jar
+kotlinc -cp task/01begin.jar main.kt -include-runtime -d main.jar
+
+kotlin -cp utils/utils.jar:classes/classes.jar:scanner/scanner.jar:task/01begin.jar:main.jar MainKt
+
+rm utils/utils.jar classes/classes.jar scanner/scanner.jar task/01begin.jar task/02integer.jar task/03boolean.jar task/04if.jar task/05case.jar task/06for.jar task/07while.jar task/08series.jar task/09proc.jar task/10minmax.jar task/11array.jar task/12matrix.jar task/13string.jar task/14file.jar task/15text.jar task/16param.jar task/17recur.jar task/18dynamic.jar task/19tree.jar main.jar
+
+Begin[1-13]
+Integer+
+Boolean+
+If+
+Case[1-11]
+For+
+While[1-13]

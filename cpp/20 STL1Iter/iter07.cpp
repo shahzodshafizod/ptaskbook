@@ -1,0 +1,16 @@
+#include <iostream>
+#include <fstream>
+#include <iterator>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	char name1[50], name2[50];
+	cin >> name1 >> name2;
+	ifstream fin(name1);
+	ofstream fout(name2);
+	remove_copy(istream_iterator<int>(fin), istream_iterator<int>(), ostream_iterator<int>(fout, "\n"), 0);
+	fin.close();
+	fout.close();
+	return 0;
+}
